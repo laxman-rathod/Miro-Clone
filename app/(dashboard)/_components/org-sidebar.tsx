@@ -16,7 +16,6 @@ const font = Poppins({
 const OrgSidebar = () => {
   const searchParams = useSearchParams();
   const favorites = searchParams.get("favorites");
-
   return (
     <div className="hidden lg:flex flex-col space-y-6 w-[206px] pl-5 pt-5">
       <Link href={"/"}>
@@ -50,7 +49,7 @@ const OrgSidebar = () => {
       />
       <div className="space-y-1 w-full">
         <Button
-          variant={favorites ? "ghost" : "secondary"}
+          variant={favorites ? "ghost" : "secondary"} // TODO: Button variant not working
           asChild
           size="lg"
           className="font-normal justify-start px-2 w-full"
