@@ -9,7 +9,7 @@ export const metadata: Metadata = {
   title: "Miro Clone",
   description: "Miro Clone",
   icons: {
-    icon: "miro-logo.svg",
+    icon: "/miro-logo.svg",
   },
 };
 
