@@ -49,7 +49,7 @@ const OrgSidebar = () => {
       />
       <div className="space-y-1 w-full">
         <Button
-          variant={favorites ? "ghost" : "secondary"} // TODO: Button variant not working
+          variant={favorites ? "ghost" : "secondary"}
           asChild
           size="lg"
           className="font-normal justify-start px-2 w-full"
