@@ -92,7 +92,6 @@ export const favorites = mutation({
     }
 
     const board = await ctx.db.get(args.id);
-
     if (!board) {
       throw new Error("Board not found!");
     }
@@ -105,7 +104,6 @@ export const favorites = mutation({
         q.eq("userId", userId).eq("boardId", board._id).eq("orgId", args.orgId)
       )
       .unique();
-
     if (existingFavorites) {
       throw new Error("Already favorited!");
     }
@@ -131,26 +129,23 @@ export const unfavorites = mutation({
     }
 
     const board = await ctx.db.get(args.id);
-
     if (!board) {
       throw new Error("Board not found!");
     }
 
     const userId = identity.subject;
 
-    const existingFavorites = await ctx.db
+    const existingFavorite = await ctx.db
       .query("userFavorites")
       .withIndex("by_user_board", (q) =>
         q.eq("userId", userId).eq("boardId", board._id)
       )
       .unique();
-
-    if (!existingFavorites) {
+    if (!existingFavorite) {
       throw new Error("Favorited board not found!");
     }
 
-    // await ctx.db.delete(existingFavorites._id);
-
+    await ctx.db.delete(existingFavorite._id);
     return board;
   },
 });
