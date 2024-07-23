@@ -30,7 +30,7 @@ const Actions = ({ children, side, sideOffset, id, title }: ActionsProps) => {
 
   const onCopyLink = () => {
     navigator.clipboard
-      .writeText(`${window.location.origin}/boards/${id}`)
+      .writeText(`${window.location.origin}/board/${id}`)
       .then(() => toast.success("Link copied to clipboard"))
       .catch(() => toast.error("Failed to copy link"));
   };
