@@ -8,7 +8,7 @@ import { Poppins } from "next/font/google";
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
 import Link from "next/link";
-import Hint from "@/components/hint";
+import { Hint } from "@/components/hint";
 import { useRenameModal } from "@/store/use-rename-modal";
 import { Actions } from "@/components/actions";
 import { Menu } from "lucide-react";
