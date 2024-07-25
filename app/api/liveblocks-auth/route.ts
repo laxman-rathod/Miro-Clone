@@ -38,5 +38,5 @@ export async function POST(req: NextRequest) {
 
   const { status, body } = await session.authorize();
 
-  return NextResponse.json(body, { status });
+  return new NextResponse(body, { status });
 }

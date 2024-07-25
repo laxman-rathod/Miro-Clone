@@ -19,8 +19,8 @@ declare global {
       id?: string;
       info?: {
         // Example properties, for useSelf, useUser, useOthers, etc.
-        // name?: string;
-        // picture?: string;
+        name?: string;
+        picture?: string;
       };
     };
 
