@@ -1,6 +1,6 @@
 "use client";
 
-import { connectionIdColor } from "@/lib/utils";
+import { connectionIdToColor } from "@/lib/utils";
 import { UserAvatar } from "./user-avatar";
 import { useSelf, useOthers } from "@liveblocks/react/suspense";
 
@@ -18,7 +18,7 @@ export const Participants = () => {
           return (
             <UserAvatar
               key={connectionId}
-              borderColor={connectionIdColor(connectionId)}
+              borderColor={connectionIdToColor(connectionId)}
               src={info?.picture}
               name={info?.name}
               fallback={info?.name?.[0] || "T"}
@@ -28,7 +28,7 @@ export const Participants = () => {
 
         {currentUser && (
           <UserAvatar
-            borderColor={connectionIdColor(currentUser.connectionId)}
+            borderColor={connectionIdToColor(currentUser.connectionId)}
             src={currentUser.info?.picture}
             name={`${currentUser.info?.name} (You)`}
             fallback={currentUser.info?.name?.[0]}
@@ -37,7 +37,7 @@ export const Participants = () => {
 
         {hasMoreUsers && (
           <UserAvatar
-            borderColor={connectionIdColor(currentUser.connectionId)}
+            borderColor={connectionIdToColor(currentUser.connectionId)}
             name={`${users.length - MAX_SHOWN_USERS} more`}
             fallback={`+${users.length - MAX_SHOWN_USERS}`}
           />
