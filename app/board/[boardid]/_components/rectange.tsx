@@ -28,7 +28,7 @@ export const Rectange = ({
       width={width}
       height={height}
       strokeWidth={1}
-      fill={fill ? colorToCss(fill) : "#FF8000"}
+      fill={fill ? colorToCss(fill) : "#000000"}
       stroke={selectionColor || "transparent"}
     />
   );
