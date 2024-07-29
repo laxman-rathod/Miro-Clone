@@ -396,9 +396,6 @@ export const Canvas = ({ boardId }: CanvasProps) => {
 
   useEffect(() => {
     const onKeyDown = (e: KeyboardEvent) => {
-      e.preventDefault();
-      e.stopPropagation();
-
       switch (e.key) {
         case "Delete": {
           deleteLayers();
