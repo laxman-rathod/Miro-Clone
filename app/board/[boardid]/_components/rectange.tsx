@@ -1,5 +1,3 @@
-"use client";
-
 import { colorToCss } from "@/lib/utils";
 import { RectangleLayer } from "@/types/canvas";
 

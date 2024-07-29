@@ -324,7 +324,7 @@ export const Canvas = ({ boardId }: CanvasProps) => {
               key={layerId}
               id={layerId}
               onLayerPointerDown={onLayerPointerDown}
-              selectionCOlor={layerIdsToColorSelection[layerId]}
+              selectionColor={layerIdsToColorSelection[layerId]}
             />
           ))}
           <SelectionBox onResizeHandlePointerDown={onResizeHandlePointerDown} />
